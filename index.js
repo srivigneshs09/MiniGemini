@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // Initialize the GoogleGenerativeAI client
-const genAi = new GoogleGenerativeAI("AIzaSyCmA6vLsmT8_Kcy7X3YhM7aRlMvdAsIggo");
+const genAi = new GoogleGenerativeAI("YOUR_API_KEY_HERE");
 
 // Serve static files from the "public" directory
 app.use(express.static('public'));
