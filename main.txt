@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import readline from 'node:readline';
 
 
-const genAi = new GoogleGenerativeAI("AIzaSyCmA6vLsmT8_Kcy7X3YhM7aRlMvdAsIggo");
+const genAi = new GoogleGenerativeAI("YOUR_API_KEY_HERE");
 
 
 const model = genAi.getGenerativeModel({
