@@ -1,0 +1,30 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import readline from 'node:readline';
+
+
+const genAi = new GoogleGenerativeAI("AIzaSyCmA6vLsmT8_Kcy7X3YhM7aRlMvdAsIggo");
+
+
+const model = genAi.getGenerativeModel({
+    model: 'gemini-1.5-flash',
+});
+
+const response = await model.generateContent(query);
+console.log(response); 
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+rl.question("Enter Your Query? .. ", async(userInput) => {
+
+    const model = genAi.getGenerativeModel({
+        model : "gemini-1.5-pro",
+        });
+        
+    const r = await model.generateContent(userInput);
+        
+    console.log(r.response.text());
+rl.close();
+});  
